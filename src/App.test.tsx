@@ -12,9 +12,9 @@ describe('App', () => {
     render(<App />)
     await waitFor(() => expect(mockGetUser).toHaveBeenCalled())
   })
-  test('should render', () => {
-    screen.debug()
-  })
+  // test('should render', () => {
+  //   screen.debug()
+  // })
 
   test('should display the children that are being passed to CustomInput', () => {
     screen.getByText(/Input/)
@@ -75,6 +75,5 @@ describe('When the user enters some text in the input element', () => {
     await userEvent.type(input, 'Tony')
 
     expect(screen.getByText(/You typed: Tony/)).toBeInTheDocument()
-    screen.debug()
   })
 })
